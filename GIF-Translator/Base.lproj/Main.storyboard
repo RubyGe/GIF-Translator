@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--SavedGIFs-->
@@ -34,7 +35,7 @@
         <!--Translate-->
         <scene sceneID="Agx-1c-cCT">
             <objects>
-                <viewController title="Translate" id="n0N-Mo-yaz" sceneMemberID="viewController">
+                <viewController title="Translate" id="n0N-Mo-yaz" customClass="SearchViewController" customModule="GIF_Translator" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="XRR-2Z-Qib"/>
                         <viewControllerLayoutGuide type="bottom" id="zka-xh-QDL"/>
@@ -42,14 +43,152 @@
                     <view key="view" contentMode="scaleToFill" id="zh9-g2-Y8o">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" alignment="center" spacing="60" translatesAutoresizingMaskIntoConstraints="NO" id="p1q-nh-JOE">
+                                <rect key="frame" x="0.0" y="121" width="320" height="258"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="34O-HY-UVO">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="63"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GIF Translator" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c8s-2C-oRb">
+                                                <rect key="frame" x="0.0" y="0.0" width="320" height="36"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Translate words into GIFs" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0om-7N-J14">
+                                                <rect key="frame" x="0.0" y="46" width="320" height="17"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iaI-DE-6aq">
+                                        <rect key="frame" x="20" y="123" width="280" height="40"/>
+                                        <subviews>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type in a phase or a sentence" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="h7T-bA-b3i">
+                                                <rect key="frame" x="0.0" y="0.0" width="280" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="IWx-x0-dwD"/>
+                                                </constraints>
+                                                <color key="textColor" white="0.35999999999999999" alpha="1" colorSpace="calibratedWhite"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="h7T-bA-b3i" firstAttribute="leading" secondItem="iaI-DE-6aq" secondAttribute="leading" id="3Tv-oV-Yv8"/>
+                                            <constraint firstItem="h7T-bA-b3i" firstAttribute="centerX" secondItem="iaI-DE-6aq" secondAttribute="centerX" id="D3K-5u-a53"/>
+                                            <constraint firstItem="h7T-bA-b3i" firstAttribute="leading" secondItem="iaI-DE-6aq" secondAttribute="leading" constant="25" id="IsT-CY-VLO"/>
+                                            <constraint firstItem="h7T-bA-b3i" firstAttribute="centerX" secondItem="iaI-DE-6aq" secondAttribute="centerX" id="obg-wK-t7u"/>
+                                        </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="3Tv-oV-Yv8"/>
+                                                <exclude reference="D3K-5u-a53"/>
+                                                <exclude reference="IsT-CY-VLO"/>
+                                                <exclude reference="obg-wK-t7u"/>
+                                            </mask>
+                                        </variation>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cvJ-NJ-uM5">
+                                        <rect key="frame" x="85" y="223" width="150" height="35"/>
+                                        <color key="backgroundColor" white="0.35999999999999999" alpha="0.10000000000000001" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="80" id="asW-tm-Vbo"/>
+                                            <constraint firstAttribute="width" constant="100" id="cvO-yi-UMP"/>
+                                            <constraint firstAttribute="height" constant="100" id="kvz-71-D4E"/>
+                                            <constraint firstAttribute="width" constant="150" id="pex-28-tCm"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                        <color key="tintColor" red="0.33608790240000003" green="0.38397053370000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="  Translate">
+                                            <color key="titleColor" white="0.35999999999999999" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="asW-tm-Vbo"/>
+                                                <exclude reference="cvO-yi-UMP"/>
+                                                <exclude reference="kvz-71-D4E"/>
+                                            </mask>
+                                        </variation>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="iaI-DE-6aq" firstAttribute="height" secondItem="p1q-nh-JOE" secondAttribute="height" id="Bzj-0b-GHU"/>
+                                    <constraint firstItem="iaI-DE-6aq" firstAttribute="centerY" secondItem="p1q-nh-JOE" secondAttribute="centerY" id="Hkj-e9-KrZ"/>
+                                    <constraint firstItem="34O-HY-UVO" firstAttribute="width" secondItem="p1q-nh-JOE" secondAttribute="width" id="R7J-4N-yxA"/>
+                                    <constraint firstItem="iaI-DE-6aq" firstAttribute="leading" secondItem="p1q-nh-JOE" secondAttribute="leading" constant="20" id="SFT-Sj-LK3"/>
+                                    <constraint firstItem="iaI-DE-6aq" firstAttribute="width" secondItem="p1q-nh-JOE" secondAttribute="width" id="UaL-ua-zQA"/>
+                                    <constraint firstItem="iaI-DE-6aq" firstAttribute="leading" secondItem="p1q-nh-JOE" secondAttribute="leading" constant="25" id="ZQq-la-qPv"/>
+                                    <constraint firstItem="iaI-DE-6aq" firstAttribute="height" secondItem="p1q-nh-JOE" secondAttribute="height" id="cCG-aU-Bus"/>
+                                    <constraint firstItem="34O-HY-UVO" firstAttribute="width" secondItem="p1q-nh-JOE" secondAttribute="width" id="hWw-ee-4Db"/>
+                                    <constraint firstAttribute="trailing" secondItem="iaI-DE-6aq" secondAttribute="trailing" constant="20" id="oVM-xn-LtM"/>
+                                    <constraint firstItem="iaI-DE-6aq" firstAttribute="width" secondItem="p1q-nh-JOE" secondAttribute="width" id="vm0-Mo-Lat"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="R7J-4N-yxA"/>
+                                        <exclude reference="Bzj-0b-GHU"/>
+                                        <exclude reference="Hkj-e9-KrZ"/>
+                                        <exclude reference="UaL-ua-zQA"/>
+                                        <exclude reference="ZQq-la-qPv"/>
+                                        <exclude reference="cCG-aU-Bus"/>
+                                        <exclude reference="vm0-Mo-Lat"/>
+                                    </mask>
+                                </variation>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="p1q-nh-JOE" secondAttribute="trailing" constant="-9" id="5Q5-Z1-Wls"/>
+                            <constraint firstItem="p1q-nh-JOE" firstAttribute="centerX" secondItem="zh9-g2-Y8o" secondAttribute="centerX" id="E8T-z8-bhs"/>
+                            <constraint firstItem="p1q-nh-JOE" firstAttribute="centerY" secondItem="zh9-g2-Y8o" secondAttribute="centerY" id="Ncg-Ij-uPQ"/>
+                            <constraint firstItem="p1q-nh-JOE" firstAttribute="width" secondItem="zh9-g2-Y8o" secondAttribute="width" id="WJ7-JC-89q"/>
+                            <constraint firstItem="p1q-nh-JOE" firstAttribute="width" secondItem="zh9-g2-Y8o" secondAttribute="width" id="dEm-lb-3n9"/>
+                            <constraint firstItem="iaI-DE-6aq" firstAttribute="centerY" secondItem="zh9-g2-Y8o" secondAttribute="centerY" id="jih-gb-jaW"/>
+                            <constraint firstItem="p1q-nh-JOE" firstAttribute="leading" secondItem="zh9-g2-Y8o" secondAttribute="leadingMargin" constant="-12" id="ly7-am-CaW"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="5Q5-Z1-Wls"/>
+                                <exclude reference="Ncg-Ij-uPQ"/>
+                                <exclude reference="WJ7-JC-89q"/>
+                                <exclude reference="ly7-am-CaW"/>
+                            </mask>
+                        </variation>
                     </view>
                     <tabBarItem key="tabBarItem" title="Translate" image="TranslateIcon" selectedImage="TranslateIcon-Selected" id="M5g-Sx-CLj"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="headlineLabel" destination="c8s-2C-oRb" id="cMj-jV-yI5"/>
+                        <outlet property="searchBoxTextField" destination="h7T-bA-b3i" id="Xjq-zO-1RZ"/>
+                        <outlet property="subheadlineLabel" destination="0om-7N-J14" id="I1p-Hp-LVl"/>
+                        <outlet property="translateButton" destination="cvJ-NJ-uM5" id="8M7-Ha-rB3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bms-rK-6lO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="800" y="-240"/>
+            <point key="canvasLocation" x="792" y="-256"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="JGe-WR-fx0">
+            <objects>
+                <viewController id="2t4-Sf-fG0" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6vs-wb-4ts"/>
+                        <viewControllerLayoutGuide type="bottom" id="Sx0-hw-hAg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Jb2-xP-LXl">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6tS-9B-clN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1306" y="-240"/>
         </scene>
         <!--Tab Bar View Controller-->
         <scene sceneID="qa0-dQ-E8c">

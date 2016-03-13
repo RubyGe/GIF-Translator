@@ -19,6 +19,9 @@
 		F606D8471C953351003F2B50 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = F606D8461C953351003F2B50 /* Color.swift */; };
 		F606D8491C953CD2003F2B50 /* Saved GIFs-Selected.png in Resources */ = {isa = PBXBuildFile; fileRef = F606D8481C953CD2003F2B50 /* Saved GIFs-Selected.png */; };
 		F606D84B1C953CD7003F2B50 /* Translate-Selected.png in Resources */ = {isa = PBXBuildFile; fileRef = F606D84A1C953CD7003F2B50 /* Translate-Selected.png */; };
+		F606D84D1C953E73003F2B50 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F606D84C1C953E73003F2B50 /* SearchViewController.swift */; };
+		F606D84F1C954BE5003F2B50 /* GIF-50.png in Resources */ = {isa = PBXBuildFile; fileRef = F606D84E1C954BE5003F2B50 /* GIF-50.png */; };
+		F606D8531C954E8F003F2B50 /* Clapperboard-48.png in Resources */ = {isa = PBXBuildFile; fileRef = F606D8521C954E8F003F2B50 /* Clapperboard-48.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +41,9 @@
 		F606D8461C953351003F2B50 /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		F606D8481C953CD2003F2B50 /* Saved GIFs-Selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Saved GIFs-Selected.png"; path = "Art/menu icons/Saved GIFs-Selected.png"; sourceTree = SOURCE_ROOT; };
 		F606D84A1C953CD7003F2B50 /* Translate-Selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Translate-Selected.png"; path = "Art/menu icons/Translate-Selected.png"; sourceTree = SOURCE_ROOT; };
+		F606D84C1C953E73003F2B50 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		F606D84E1C954BE5003F2B50 /* GIF-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "GIF-50.png"; path = "Art/menu icons/GIF-50.png"; sourceTree = SOURCE_ROOT; };
+		F606D8521C954E8F003F2B50 /* Clapperboard-48.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Clapperboard-48.png"; path = "Art/menu icons/Clapperboard-48.png"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +119,7 @@
 				F606D8271C952219003F2B50 /* AppDelegate.swift */,
 				F606D8401C9523E1003F2B50 /* TabBarViewController.swift */,
 				F606D8461C953351003F2B50 /* Color.swift */,
+				F606D84C1C953E73003F2B50 /* SearchViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -134,6 +141,8 @@
 				F606D8441C952F35003F2B50 /* Saved GIFs.png */,
 				F606D8481C953CD2003F2B50 /* Saved GIFs-Selected.png */,
 				F606D84A1C953CD7003F2B50 /* Translate-Selected.png */,
+				F606D8521C954E8F003F2B50 /* Clapperboard-48.png */,
+				F606D84E1C954BE5003F2B50 /* GIF-50.png */,
 			);
 			name = Assets;
 			sourceTree = "<group>";
@@ -200,11 +209,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F606D8531C954E8F003F2B50 /* Clapperboard-48.png in Resources */,
 				F606D84B1C953CD7003F2B50 /* Translate-Selected.png in Resources */,
 				F606D8351C952219003F2B50 /* LaunchScreen.storyboard in Resources */,
 				F606D8321C952219003F2B50 /* Assets.xcassets in Resources */,
 				F606D8491C953CD2003F2B50 /* Saved GIFs-Selected.png in Resources */,
 				F606D8431C952F2E003F2B50 /* Translate.png in Resources */,
+				F606D84F1C954BE5003F2B50 /* GIF-50.png in Resources */,
 				F606D82D1C952219003F2B50 /* Main.storyboard in Resources */,
 				F606D8451C952F35003F2B50 /* Saved GIFs.png in Resources */,
 			);
@@ -265,6 +276,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F606D84D1C953E73003F2B50 /* SearchViewController.swift in Sources */,
 				F606D8301C952219003F2B50 /* GIF_Translator.xcdatamodeld in Sources */,
 				F606D8471C953351003F2B50 /* Color.swift in Sources */,
 				F606D8411C9523E1003F2B50 /* TabBarViewController.swift in Sources */,
