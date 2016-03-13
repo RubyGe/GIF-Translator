@@ -1,0 +1,6 @@
+framework module Pods_GIF_Translator {
+  umbrella header "Pods-GIF-Translator-umbrella.h"
+
+  export *
+  module * { export * }
+}

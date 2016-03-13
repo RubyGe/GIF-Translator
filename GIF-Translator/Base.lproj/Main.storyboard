@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1509" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Yta-EW-cpf">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <scenes>
+        <!--SavedGIFs-->
+        <scene sceneID="jgG-mX-PBS">
+            <objects>
+                <viewController title="SavedGIFs" id="JAb-Ir-p2U" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8HR-DZ-TWS"/>
+                        <viewControllerLayoutGuide type="bottom" id="R7g-w3-ZlE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="EfH-3r-I8J">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="szg-jo-UfC">
+                                <rect key="frame" x="40" y="164" width="240" height="128"/>
+                                <color key="backgroundColor" red="0.668266786447413" green="1" blue="0.19683854085331953" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Saved GIFs" image="SaveIcon" selectedImage="SaveIcon-Selected" id="05i-A0-m6r"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qeT-31-Cnw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="800" y="421"/>
+        </scene>
+        <!--Translate-->
+        <scene sceneID="Agx-1c-cCT">
+            <objects>
+                <viewController title="Translate" id="n0N-Mo-yaz" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="XRR-2Z-Qib"/>
+                        <viewControllerLayoutGuide type="bottom" id="zka-xh-QDL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zh9-g2-Y8o">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Translate" image="TranslateIcon" selectedImage="TranslateIcon-Selected" id="M5g-Sx-CLj"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bms-rK-6lO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="800" y="-240"/>
+        </scene>
+        <!--Tab Bar View Controller-->
+        <scene sceneID="qa0-dQ-E8c">
+            <objects>
+                <tabBarController id="Yta-EW-cpf" customClass="TabBarViewController" customModule="GIF_Translator" customModuleProvider="target" sceneMemberID="viewController">
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="bHA-fa-4I9">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="n0N-Mo-yaz" kind="relationship" relationship="viewControllers" id="RPo-LO-VsP"/>
+                        <segue destination="JAb-Ir-p2U" kind="relationship" relationship="viewControllers" id="J0f-vM-sSW"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6os-Hz-tM5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-20" y="91"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="SaveIcon" width="50" height="50"/>
+        <image name="SaveIcon-Selected" width="50" height="50"/>
+        <image name="TranslateIcon" width="50" height="50"/>
+        <image name="TranslateIcon-Selected" width="50" height="50"/>
+    </resources>
+</document>
