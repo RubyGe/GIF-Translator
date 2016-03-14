@@ -67,7 +67,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iaI-DE-6aq">
                                         <rect key="frame" x="20" y="123" width="280" height="40"/>
                                         <subviews>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type in a phase or a sentence" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="h7T-bA-b3i">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type in a phase or a sentence" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="h7T-bA-b3i">
                                                 <rect key="frame" x="0.0" y="0.0" width="280" height="40"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="IWx-x0-dwD"/>
@@ -92,7 +92,7 @@
                                             </mask>
                                         </variation>
                                     </stackView>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cvJ-NJ-uM5">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cvJ-NJ-uM5">
                                         <rect key="frame" x="85" y="223" width="150" height="35"/>
                                         <color key="backgroundColor" white="0.35999999999999999" alpha="0.10000000000000001" colorSpace="calibratedWhite"/>
                                         <constraints>
@@ -113,6 +113,9 @@
                                                 <exclude reference="kvz-71-D4E"/>
                                             </mask>
                                         </variation>
+                                        <connections>
+                                            <segue destination="G5L-fT-g9Q" kind="show" id="X8Y-uB-f2L"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -159,7 +162,7 @@
                             </mask>
                         </variation>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Translate" image="TranslateIcon" selectedImage="TranslateIcon-Selected" id="M5g-Sx-CLj"/>
+                    <navigationItem key="navigationItem" id="Izm-3s-q48"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="headlineLabel" destination="c8s-2C-oRb" id="cMj-jV-yI5"/>
@@ -170,25 +173,47 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bms-rK-6lO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="792" y="-256"/>
+            <point key="canvasLocation" x="1324" y="-256"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="JGe-WR-fx0">
+        <!--Search Results Table View Controller-->
+        <scene sceneID="Dgt-hU-Xf6">
             <objects>
-                <viewController id="2t4-Sf-fG0" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="6vs-wb-4ts"/>
-                        <viewControllerLayoutGuide type="bottom" id="Sx0-hw-hAg"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Jb2-xP-LXl">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                <tableViewController id="G5L-fT-g9Q" customClass="SearchResultsTableViewController" customModule="GIF_Translator" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="235" sectionHeaderHeight="28" sectionFooterHeight="28" id="dEm-j7-Cde">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="6tS-9B-clN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="searchResultCell" rowHeight="235" id="L2n-Ro-7WA" customClass="ResultsTableViewCell" customModule="GIF_Translator" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="320" height="235"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="L2n-Ro-7WA" id="qdb-Ol-r2H">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="234.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IJN-Ul-FpH">
+                                            <rect key="frame" x="8" y="8" width="304" height="218.5"/>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="IJN-Ul-FpH" firstAttribute="centerX" secondItem="qdb-Ol-r2H" secondAttribute="centerX" id="rHW-07-SHL"/>
+                                        <constraint firstItem="IJN-Ul-FpH" firstAttribute="centerY" secondItem="qdb-Ol-r2H" secondAttribute="centerY" id="ziZ-mA-7PS"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="gifImageView" destination="IJN-Ul-FpH" id="g6u-kF-dTo"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="G5L-fT-g9Q" id="th9-xw-7PN"/>
+                            <outlet property="delegate" destination="G5L-fT-g9Q" id="MuB-X7-3lY"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JT9-zw-PNV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1306" y="-240"/>
+            <point key="canvasLocation" x="1740" y="-256"/>
         </scene>
         <!--Tab Bar View Controller-->
         <scene sceneID="qa0-dQ-E8c">
@@ -201,13 +226,32 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="n0N-Mo-yaz" kind="relationship" relationship="viewControllers" id="RPo-LO-VsP"/>
+                        <segue destination="Kap-IS-StO" kind="relationship" relationship="viewControllers" id="RPo-LO-VsP"/>
                         <segue destination="JAb-Ir-p2U" kind="relationship" relationship="viewControllers" id="J0f-vM-sSW"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6os-Hz-tM5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-20" y="91"/>
+        </scene>
+        <!--Translate-->
+        <scene sceneID="eU9-oY-7bY">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Kap-IS-StO" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Translate" image="TranslateIcon" selectedImage="TranslateIcon-Selected" id="M5g-Sx-CLj"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="kZV-gV-mdQ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="n0N-Mo-yaz" kind="relationship" relationship="rootViewController" id="n04-gG-v2Z"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nrh-mC-cvu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="792" y="-256"/>
         </scene>
     </scenes>
     <resources>

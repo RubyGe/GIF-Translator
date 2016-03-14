@@ -1,10 +1,18 @@
 PODS:
+  - Gifu (1.0.1)
+  - SDWebImage (3.7.5):
+    - SDWebImage/Core (= 3.7.5)
+  - SDWebImage/Core (3.7.5)
   - SwiftyJSON (2.3.2)
 
 DEPENDENCIES:
+  - Gifu
+  - SDWebImage (~> 3.7)
   - SwiftyJSON
 
 SPEC CHECKSUMS:
+  Gifu: bf7a99fe9f20a1dc18c3cb4289aebc922a2ad419
+  SDWebImage: 69c6303e3348fba97e03f65d65d4fbc26740f461
   SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
 
 COCOAPODS: 0.39.0

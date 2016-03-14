@@ -4,7 +4,17 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Gifu.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-GIF-Translator.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>SDWebImage.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -17,12 +27,22 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>7EBBEB7BBC505D7AC42D3BA3DD424CE8</key>
+		<key>054E5C06745DB0822AACAF50040EB1D3</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>F19B01D4B693DEE1CA81E978B7A01614</key>
+		<key>467E44DDC6BCAB6193D8AD6519DBDEDF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>94240AD008C6ADB5A5991948FF49C2F3</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>AEA56EBE1B518C71721209FB26701898</key>
 		<dict>
 			<key>primary</key>
 			<true/>

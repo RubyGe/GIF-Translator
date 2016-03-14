@@ -16,9 +16,13 @@ class SearchViewController: UIViewController {
     @IBOutlet weak var translateButton: UIButton!
 //    @IBOutlet weak var randomButton: UIButton!
     
+    override func viewWillAppear(animated: Bool) {
+        self.navigationController?.navigationBarHidden = true
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //self.navigationController?.navigationBarHidden = true
         searchBoxTextField.layer.borderWidth = 1
         searchBoxTextField.layer.cornerRadius = 3
         searchBoxTextField.layer.borderColor = darkPurpleBackgroundColor.CGColor
@@ -44,14 +48,16 @@ class SearchViewController: UIViewController {
     }
     
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
+        let destinationViewController = segue.destinationViewController as! SearchResultsTableViewController
+        destinationViewController.searchTerm = searchBoxTextField.text
+        print(destinationViewController.searchTerm!)
         // Pass the selected object to the new view controller.
     }
-    */
+    
 
 }

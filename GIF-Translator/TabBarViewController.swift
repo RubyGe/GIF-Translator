@@ -14,6 +14,8 @@ class TabBarViewController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
        // UITabBar.appearance().barTintColor = UIColor.blackColor()
+        
+        
         UITabBar.appearance().tintColor = darkPurpleColor
         self.tabBar.frame.size.height = 100
         

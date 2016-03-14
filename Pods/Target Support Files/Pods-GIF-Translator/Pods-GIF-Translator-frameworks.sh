@@ -84,8 +84,12 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "Pods-GIF-Translator/Gifu.framework"
+  install_framework "Pods-GIF-Translator/SDWebImage.framework"
   install_framework "Pods-GIF-Translator/SwiftyJSON.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "Pods-GIF-Translator/Gifu.framework"
+  install_framework "Pods-GIF-Translator/SDWebImage.framework"
   install_framework "Pods-GIF-Translator/SwiftyJSON.framework"
 fi

@@ -5,5 +5,5 @@ use_frameworks!
 
 target 'GIF-Translator' do
 	pod 'SwiftyJSON'
+	pod 'SDWebImage', '~>3.7'
 end
-

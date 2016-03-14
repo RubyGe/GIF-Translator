@@ -22,6 +22,9 @@
 		F606D84D1C953E73003F2B50 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F606D84C1C953E73003F2B50 /* SearchViewController.swift */; };
 		F606D84F1C954BE5003F2B50 /* GIF-50.png in Resources */ = {isa = PBXBuildFile; fileRef = F606D84E1C954BE5003F2B50 /* GIF-50.png */; };
 		F606D8531C954E8F003F2B50 /* Clapperboard-48.png in Resources */ = {isa = PBXBuildFile; fileRef = F606D8521C954E8F003F2B50 /* Clapperboard-48.png */; };
+		F606D85D1C95568D003F2B50 /* SearchResultsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F606D85C1C95568D003F2B50 /* SearchResultsTableViewController.swift */; };
+		F606D85F1C955722003F2B50 /* DataModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = F606D85E1C955722003F2B50 /* DataModels.swift */; };
+		F606D8611C95677C003F2B50 /* ResultsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F606D8601C95677C003F2B50 /* ResultsTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +47,9 @@
 		F606D84C1C953E73003F2B50 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		F606D84E1C954BE5003F2B50 /* GIF-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "GIF-50.png"; path = "Art/menu icons/GIF-50.png"; sourceTree = SOURCE_ROOT; };
 		F606D8521C954E8F003F2B50 /* Clapperboard-48.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Clapperboard-48.png"; path = "Art/menu icons/Clapperboard-48.png"; sourceTree = SOURCE_ROOT; };
+		F606D85C1C95568D003F2B50 /* SearchResultsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultsTableViewController.swift; sourceTree = "<group>"; };
+		F606D85E1C955722003F2B50 /* DataModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataModels.swift; sourceTree = "<group>"; };
+		F606D8601C95677C003F2B50 /* ResultsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +126,8 @@
 				F606D8401C9523E1003F2B50 /* TabBarViewController.swift */,
 				F606D8461C953351003F2B50 /* Color.swift */,
 				F606D84C1C953E73003F2B50 /* SearchViewController.swift */,
+				F606D85C1C95568D003F2B50 /* SearchResultsTableViewController.swift */,
+				F606D8601C95677C003F2B50 /* ResultsTableViewCell.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -129,6 +137,7 @@
 			children = (
 				F606D82E1C952219003F2B50 /* GIF_Translator.xcdatamodeld */,
 				F606D8361C952219003F2B50 /* Info.plist */,
+				F606D85E1C955722003F2B50 /* DataModels.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -278,7 +287,10 @@
 			files = (
 				F606D84D1C953E73003F2B50 /* SearchViewController.swift in Sources */,
 				F606D8301C952219003F2B50 /* GIF_Translator.xcdatamodeld in Sources */,
+				F606D8611C95677C003F2B50 /* ResultsTableViewCell.swift in Sources */,
+				F606D85D1C95568D003F2B50 /* SearchResultsTableViewController.swift in Sources */,
 				F606D8471C953351003F2B50 /* Color.swift in Sources */,
+				F606D85F1C955722003F2B50 /* DataModels.swift in Sources */,
 				F606D8411C9523E1003F2B50 /* TabBarViewController.swift in Sources */,
 				F606D8281C952219003F2B50 /* AppDelegate.swift in Sources */,
 			);
