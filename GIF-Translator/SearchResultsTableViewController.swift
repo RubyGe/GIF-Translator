@@ -27,8 +27,10 @@ class SearchResultsTableViewController: UITableViewController {
         var endpoint = ""
         self.tableView.separatorColor = UIColor.clearColor()
         
+        
         if let searchTerm = searchTerm
         {
+            self.title = searchTerm
             let escapedString = searchTerm.stringByAddingPercentEncodingWithAllowedCharacters(.URLHostAllowedCharacterSet())
             endpoint = "http://api.giphy.com/v1/gifs/search?q=\(escapedString!)&limit=7&api_key=\(apiKey)"
             //print(endpoint)
@@ -63,6 +65,7 @@ class SearchResultsTableViewController: UITableViewController {
                         
                     } else {
                         print("no results fetched") //@To-do set the view to display the message
+                        
                     }
                 }
             }
@@ -108,21 +111,23 @@ class SearchResultsTableViewController: UITableViewController {
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return searchResultsList.count
+        return resultCount
     }
     
-    func getImageHeight(indexPath: NSIndexPath) ->Double {
-        let size = searchResultsList[indexPath.row].size
-        let originalHeight = Double(size!.height!)
-        let originalWidth = Double(size!.width!)
-         print("Original Heigh:\(originalHeight), Original Width: \(originalWidth)")
-        let width = Double(self.tableView.frame.size.width) - 16.0
-        let height = originalHeight * width / originalWidth
-        return height
-    }
+//    func getImageHeight(size:Size, screenWidth:CGFloat) ->Double {
+//    //    let size = searchResultsList[indexPath.row].size
+//        let originalHeight = Double(size.height!)
+//        let originalWidth = Double(size.width!)
+//         print("Original Heigh:\(originalHeight), Original Width: \(originalWidth)")
+//        let width = Double(self.tableView.frame.size.width) - 16.0
+//        let height = originalHeight * width / originalWidth
+//        return height
+//    }
 
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        let height = getImageHeight(indexPath)
+        let size = searchResultsList[indexPath.row].size
+        let screenWidth = self.tableView.frame.size.width
+        let height = getImageHeight(size!, screenWidth: screenWidth)
         print("Height for row at index path \(indexPath.row): \(height)")
         return CGFloat(height + 16.0)
         
@@ -142,7 +147,9 @@ class SearchResultsTableViewController: UITableViewController {
         
         if let imageURL = searchResultsList[indexPath.row].url
         {
-            let height = getImageHeight(indexPath)
+            let size = searchResultsList[indexPath.row].size
+            let screenWidth = self.tableView.frame.size.width
+            let height = getImageHeight(size!, screenWidth:screenWidth)
             let width = Double(self.tableView.frame.size.width) - 16.00
             print("imageView width:\(width)")
             print("imageView height:\(height)")
@@ -161,6 +168,7 @@ class SearchResultsTableViewController: UITableViewController {
         if let resultCell = cell as? ResultsTableViewCell {
             resultCell.gifImageView?.image = nil
         }
+        cell.selectionStyle = UITableViewCellSelectionStyle.None
         return cell
     }
     
@@ -200,14 +208,21 @@ class SearchResultsTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let destinationViewController = segue.destinationViewController as! ImageDetailViewController
+        if let path = tableView.indexPathForSelectedRow?.row {
+            destinationViewController.imageInfo = searchResultsList[path]
+        }
+        destinationViewController.searchTerm = searchTerm
+        
+        
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
     }
-    */
+    
 
 }

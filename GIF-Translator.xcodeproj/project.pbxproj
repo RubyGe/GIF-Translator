@@ -25,6 +25,10 @@
 		F606D85D1C95568D003F2B50 /* SearchResultsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F606D85C1C95568D003F2B50 /* SearchResultsTableViewController.swift */; };
 		F606D85F1C955722003F2B50 /* DataModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = F606D85E1C955722003F2B50 /* DataModels.swift */; };
 		F606D8611C95677C003F2B50 /* ResultsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F606D8601C95677C003F2B50 /* ResultsTableViewCell.swift */; };
+		F606D8651C9666EB003F2B50 /* ImageDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F606D8641C9666EB003F2B50 /* ImageDetailViewController.swift */; };
+		F606D8691C966CC3003F2B50 /* Forward Arrow Filled-50.png in Resources */ = {isa = PBXBuildFile; fileRef = F606D8681C966CC3003F2B50 /* Forward Arrow Filled-50.png */; };
+		F606D86B1C967469003F2B50 /* ImageHeight.swift in Sources */ = {isa = PBXBuildFile; fileRef = F606D86A1C967469003F2B50 /* ImageHeight.swift */; };
+		F606D86D1C96A148003F2B50 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = F606D86C1C96A148003F2B50 /* icon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +54,10 @@
 		F606D85C1C95568D003F2B50 /* SearchResultsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultsTableViewController.swift; sourceTree = "<group>"; };
 		F606D85E1C955722003F2B50 /* DataModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataModels.swift; sourceTree = "<group>"; };
 		F606D8601C95677C003F2B50 /* ResultsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsTableViewCell.swift; sourceTree = "<group>"; };
+		F606D8641C9666EB003F2B50 /* ImageDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageDetailViewController.swift; sourceTree = "<group>"; };
+		F606D8681C966CC3003F2B50 /* Forward Arrow Filled-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Forward Arrow Filled-50.png"; path = "Art/Forward Arrow Filled-50.png"; sourceTree = SOURCE_ROOT; };
+		F606D86A1C967469003F2B50 /* ImageHeight.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageHeight.swift; sourceTree = "<group>"; };
+		F606D86C1C96A148003F2B50 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.png; path = Art/icon.png; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +136,8 @@
 				F606D84C1C953E73003F2B50 /* SearchViewController.swift */,
 				F606D85C1C95568D003F2B50 /* SearchResultsTableViewController.swift */,
 				F606D8601C95677C003F2B50 /* ResultsTableViewCell.swift */,
+				F606D8641C9666EB003F2B50 /* ImageDetailViewController.swift */,
+				F606D86A1C967469003F2B50 /* ImageHeight.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -151,6 +161,8 @@
 				F606D8481C953CD2003F2B50 /* Saved GIFs-Selected.png */,
 				F606D84A1C953CD7003F2B50 /* Translate-Selected.png */,
 				F606D8521C954E8F003F2B50 /* Clapperboard-48.png */,
+				F606D8681C966CC3003F2B50 /* Forward Arrow Filled-50.png */,
+				F606D86C1C96A148003F2B50 /* icon.png */,
 				F606D84E1C954BE5003F2B50 /* GIF-50.png */,
 			);
 			name = Assets;
@@ -223,6 +235,8 @@
 				F606D8351C952219003F2B50 /* LaunchScreen.storyboard in Resources */,
 				F606D8321C952219003F2B50 /* Assets.xcassets in Resources */,
 				F606D8491C953CD2003F2B50 /* Saved GIFs-Selected.png in Resources */,
+				F606D8691C966CC3003F2B50 /* Forward Arrow Filled-50.png in Resources */,
+				F606D86D1C96A148003F2B50 /* icon.png in Resources */,
 				F606D8431C952F2E003F2B50 /* Translate.png in Resources */,
 				F606D84F1C954BE5003F2B50 /* GIF-50.png in Resources */,
 				F606D82D1C952219003F2B50 /* Main.storyboard in Resources */,
@@ -291,7 +305,9 @@
 				F606D85D1C95568D003F2B50 /* SearchResultsTableViewController.swift in Sources */,
 				F606D8471C953351003F2B50 /* Color.swift in Sources */,
 				F606D85F1C955722003F2B50 /* DataModels.swift in Sources */,
+				F606D86B1C967469003F2B50 /* ImageHeight.swift in Sources */,
 				F606D8411C9523E1003F2B50 /* TabBarViewController.swift in Sources */,
+				F606D8651C9666EB003F2B50 /* ImageDetailViewController.swift in Sources */,
 				F606D8281C952219003F2B50 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

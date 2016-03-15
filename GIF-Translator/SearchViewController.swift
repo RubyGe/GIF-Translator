@@ -8,12 +8,40 @@
 
 import UIKit
 
-class SearchViewController: UIViewController {
+class SearchViewController: UIViewController, UITextFieldDelegate {
 
+
+    @IBAction func editingChanged(sender: UITextField) {
+        print("Editing Changed: \(sender.text)")
+        if sender.text == "" {
+            self.translateButton.enabled = false
+        } else {
+            self.translateButton.enabled = true
+        }
+    }
+    
+    @IBAction func translateButtonTouchDown(sender: UIButton) {
+        sender.backgroundColor = buttonTouchedBackgroundColor
+    }
+    
+    @IBAction func translateButtonTouchUpInside(sender: UIButton) {
+        sender.backgroundColor = buttonBackgroundColor
+    }
+    
+    
+    
     @IBOutlet weak var searchBoxTextField: UITextField!
     @IBOutlet weak var headlineLabel: UILabel!
     @IBOutlet weak var subheadlineLabel: UILabel!
     @IBOutlet weak var translateButton: UIButton!
+    
+
+    @IBAction func tapScreen(sender: AnyObject) {
+        view.endEditing(true)
+    }
+    
+    
+    
 //    @IBOutlet weak var randomButton: UIButton!
     
     override func viewWillAppear(animated: Bool) {
@@ -23,23 +51,40 @@ class SearchViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         //self.navigationController?.navigationBarHidden = true
-        searchBoxTextField.layer.borderWidth = 1
-        searchBoxTextField.layer.cornerRadius = 3
-        searchBoxTextField.layer.borderColor = darkPurpleBackgroundColor.CGColor
+        self.searchBoxTextField.delegate = self
         
-        headlineLabel.textColor = darkPurpleBackgroundColor
-        subheadlineLabel.textColor = darkPurpleColor
+        self.searchBoxTextField.layer.borderWidth = 1
+        self.searchBoxTextField.layer.cornerRadius = 3
+        self.searchBoxTextField.layer.borderColor = darkPurpleBackgroundColor.CGColor
+        
+        self.headlineLabel.textColor = darkPurpleBackgroundColor
+        self.subheadlineLabel.textColor = darkPurpleColor
         
         //translateButton.layer.borderWidth = 1
-        translateButton.layer.cornerRadius = 3
-        //translateButton.backgroundColor = lightPurpleColor
-        translateButton.setTitleColor(darkPurpleColor, forState: UIControlState.Normal)
-        translateButton.setTitleColor(lightPurpleColor, forState: UIControlState.Highlighted)
+        self.translateButton.layer.cornerRadius = 3
+        self.translateButton.backgroundColor = buttonBackgroundColor
+        self.translateButton.setTitleColor(darkPurpleColor, forState: UIControlState.Normal)
+        self.translateButton.setTitleColor(darkPurpleTransparentColor, forState: UIControlState.Highlighted)
+        self.translateButton.setTitleColor(darkPurpleTransparentColor, forState: UIControlState.Disabled)
         
         //randomButton.layer.borderWidth = 1
         //randomButton.layer.cornerRadius = 3
         //randomButton.backgroundColor = lightPurpleColor
-
+        
+        translateButton.enabled = false
+    }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        
+        //textField code
+        
+        
+        //textField.resignFirstResponder()  //if desired
+        
+        if textField.text != "" {
+            performSegueWithIdentifier("showSearchResults", sender: nil)
+        }
+        return true
     }
 
     override func didReceiveMemoryWarning() {
